@@ -1,0 +1,24 @@
+diff -ur ItemEditor/linuxbuild.sh ItemEditor-Mod/linuxbuild.sh
+--- ItemEditor/linuxbuild.sh	2023-03-20 14:20:30.642902488 +0100
++++ ItemEditor-Mod/linuxbuild.sh	2023-03-20 14:20:17.927090625 +0100
+@@ -4,7 +4,7 @@
+ PLUGIN_XML_DIR="`pwd`/Source/Plugins"
+ RELEASE_DIR="`pwd`/Source/bin/Release"
+ 
++xbuild /p:Configuration=Release ItemEditor.sln
+-msbuild /p:Configuration=Release ItemEditor.sln
+ 
+ rm -rf $FINAL_RELEASE_DIR
+ mkdir -p $FINAL_RELEASE_DIR || exit
+diff -ur ItemEditor/Source/Controls/ListBase.cs ItemEditor-Mod/Source/Controls/ListBase.cs
+--- ItemEditor/Source/Controls/ListBase.cs	2023-03-20 14:20:49.138628816 +0100
++++ ItemEditor-Mod/Source/Controls/ListBase.cs	2023-03-20 14:20:17.907090920 +0100
+@@ -65,7 +65,7 @@
+             get
+             {
+                 int index = SelectedIndex;
++                return index != -1 ? Items[index] : default(T);
+-                return index != -1 ? Items[index] : default;
+             }
+ 
+             set

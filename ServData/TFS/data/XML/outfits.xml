@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<outfits>
+	<!-- Female outfits -->
+	<outfit type="0" looktype="21" name="Citizen" premium="no" unlocked="yes" enabled="yes" />
+
+	<!-- Male outfits -->
+	<outfit type="1" looktype="20" name="Citizen" premium="no" unlocked="yes" enabled="yes" />
+</outfits>

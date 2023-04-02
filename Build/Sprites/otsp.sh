@@ -1,0 +1,1 @@
+git clone https://github.com/IntinteDAO/opentibia_sprite_pack
