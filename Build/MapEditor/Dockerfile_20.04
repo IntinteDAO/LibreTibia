@@ -1,0 +1,22 @@
+FROM ubuntu:20.04 as base
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && apt-get -y upgrade && \
+  apt-get install -y git cmake libasio-dev nlohmann-json3-dev libfmt-dev libglu1-mesa-dev \
+              libwxgtk3.0-gtk3-dev libarchive-dev freeglut3-dev libxmu-dev libxi-dev
+
+RUN apt-get update && apt-get install -y g++
+
+RUN apt-get -y update; \
+    apt-get install -y \
+    libboost-all-dev \
+    build-essential \
+    python-dev \
+    python-setuptools \
+    libboost-python-dev \
+    libboost-thread-dev
+
+
+CMD ["/bin/bash"]
+
