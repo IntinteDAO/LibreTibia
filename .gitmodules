@@ -1,0 +1,8 @@
+[submodule "Build/MapEditor/opentibia_sprite_pack"]
+	path = Build/MapEditor/opentibia_sprite_pack
+	url = https://github.com/IntinteDAO/opentibia_sprite_pack.git
+
+[submodule "Build/MapEditor/rme"]
+        path = Build/MapEditor/rme
+        url = https://github.com/hampusborgos/rme.git
+
